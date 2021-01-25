@@ -1,0 +1,23 @@
+#Daniel Burke (c)
+#simple dose calculation
+#do not use for any clinical purpose - included for entirely educational use
+#based upon model developed by Kothan & Tungjai 2011 see here: "http://thescipub.com/html/10.3844/ajassp.2011.923.926"
+#tested using Jupyter online python classic notebook :https://jupyter.org/try
+
+print("Basic dose calculator version 1.0")
+
+#introduce the program
+
+kV=float(input("Please enter the kV value:"))
+
+#read kV value in from user and convert to a floating point number
+
+mAs = float(input("Please enter the mAs value:"))
+
+#read mAs value in from user and convert to a floating point number
+
+dose = 0.00877 * 0.000653 * pow(kV,2) * mAs
+
+#print calculated value
+                  
+print(round(dose,2), "mGy")
